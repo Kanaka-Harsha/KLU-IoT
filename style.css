@@ -1,0 +1,420 @@
+:root 
+{
+  --red: #b42222;
+  --white: #ffffff;
+  --gray: rgb(211, 211, 211);
+  --text-gray: rgb(94, 94, 94);
+}
+
+*
+{
+  font-family: "Merriweather", serif;
+}
+
+body 
+{
+  background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/* ---------------- APPLY NOW BUTTON ---------------- */
+#applyNow button
+{
+  right: 0;
+  top: 80%;
+  transform: rotate(90deg) translateY(50%);
+  transform-origin: right center;
+  z-index: 999;
+  position: fixed;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  background-color: var(--red);
+  border: none;
+}
+#applyNow a
+{
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ---------------- HEADER SECTION ---------------- */
+#KL-IoT-Logo 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#KLLogo 
+{
+  width: 100%;
+}
+#IoT 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  width: 100%;
+  height: 100px;
+  color: var(--red);
+  text-align: center;
+}
+
+/* ---------------- NAVIGATION BAR ---------------- */
+#nav 
+{
+  width: 99%;
+  height: 40px;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 1px var(--red);
+}
+#nav ul 
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  gap: 50px;
+}
+#nav ul li 
+{
+  float: left;
+}
+#nav ul li a 
+{
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 200;
+  border-radius: 20px;
+  transition: background-color 0.2s ease-in-out, color 0.1s ease-in-out;
+}
+#nav ul li a:hover
+{
+  transform: scale(1.1);
+}
+
+/* ---------------- MOVING IMAGES ---------------- */
+#movPics 
+{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 10px;
+  background-color: var(--gray);
+}
+#marquee 
+{
+  width: 95%;
+  height: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#marquee-track 
+{
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: max-content;
+}
+#marquee-track img 
+{
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  box-shadow: 5px 2px 5px rgb(0, 0, 0);
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+#about
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  width: 95%;
+  height: 500px;
+  border-radius: 20px;
+  color: var(--white);
+}
+#about-us
+{
+  width: 60%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+#about-us p
+{
+  color: rgb(51, 50, 50);
+  margin: 10px;
+  text-align: justify;
+  font-size: 1rem;
+}
+#about-us h1
+{
+  color: var(--red);
+  text-decoration: underline;
+  font-size: 1.8rem;
+  margin: 10px;
+}
+#latestScroll
+{
+  width: 30%;
+  height: 400px;
+  border: 2px solid var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 0 20px 1px var(--red);
+}
+#scroll-head
+{
+  width: 90%;
+  height: 40px;
+  background-color: var(--red);
+  border-radius: 20px;
+}
+#scroll-head h1
+{
+  color: var(--white);
+  font-size: 1rem;
+  text-align: center;
+}
+#scroll-content
+{
+  width: 90%;
+  height: 330px;
+  overflow: hidden;
+  position: relative;
+}
+#scroll-content ul 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  animation: scrollUp 10s linear infinite;
+}
+#scroll-content ul li 
+{
+  padding: 10px 0;
+}
+#scroll-content ul li a 
+{
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 500;
+}
+@keyframes scrollUp 
+{
+  0% { top: 100%; }
+  100% { top: -100%; }
+}
+
+/* ---------------- DETAILS SECTION ---------------- */
+#details
+{
+  margin-top: 10px;
+  width: 95%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.vision
+{
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 1px var(--red);
+  width: 40%;
+  height: 300px;
+  transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  line-height: 20px;
+}
+.vision h1
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--red);
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.vision p
+{
+  padding: 20px;
+  color: var(--text-gray);
+  text-align: justify;
+  line-height: 25px;
+}
+.vision:hover
+{
+  box-shadow: 0 0 20px 1px var(--red);
+  scale: 1.1;
+}
+
+/* ---------------- PEO & VIDEO ---------------- */
+#withVideo
+{
+  height: 100vh;
+  width: 40%;
+  box-shadow: none;
+  gap: 10px;
+}
+#withVideo:hover
+{
+  scale: 1;
+}
+video
+{
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--red);
+  border-radius: 20px;
+}
+#peos
+{
+  margin: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 1px var(--red);
+  width: auto;
+  height: 300px;
+  transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#peos:hover
+{
+  box-shadow: 0 0 20px 1px var(--red);
+  scale: 1.1;
+}
+
+/* ---------------- PROGRAM OUTCOMES TABLE ---------------- */
+#pos
+{
+  width: 40%;
+  height: 100vh;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+#pos:hover
+{
+  box-shadow: 0 0 20px 1px var(--red);
+}
+#pos .table td
+{
+  font-size: 0.8rem;
+  line-height: 18px;
+  color: var(--text-gray);
+  text-align: justify;
+  border-radius: 10px;
+}
+#pos .table tr
+{
+  border: 2px solid var(--red);
+}
+
+/* ---------------- GENERAL TABLE STYLING ---------------- */
+.table td
+{
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  line-height: 19px;
+  text-align: justify;
+}
+.table tr
+{
+  border: 2px solid var(--red);
+}
+
+/* ---------------- RECRUITERS & FOOTER ---------------- */
+#recuters
+{
+  margin-top: 40px;
+  width: 100%;
+  height: 100vh;
+  /* background-color: antiquewhite; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#companies
+{
+    width:100%;
+    height:100%;
+    /* background-color: aqua; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:50px;
+}
+#recuters h1
+{
+    background-color: #b42222;
+    color:white;
+    width:60%;
+    text-align: center;
+    border-radius: 20px;
+}
+#companies img
+{
+    width:20%;
+    height:30vh;
+    box-shadow: 0 0 20px 1px var(--red);
+    border-radius: 10px;
+    transition: 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+#companies img:hover
+{
+    scale:1.1;
+}
+footer
+{
+    /* margin-top:10px; */
+  width: 100%;
+  background-color: var(--red);
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
