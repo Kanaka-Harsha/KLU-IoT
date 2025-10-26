@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Smart Tubelight Control</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(to bottom right, #24b9d0, #7a394c);
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+        h1 {
+          margin-bottom: 40px;
+          font-size: 2em;
+          text-shadow: 2px 2px #000;
+        }
+        .button {
+          padding: 15px 35px;
+          font-size: 1.2em;
+          margin: 10px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .on {
+          background: #00c853;
+          color: white;
+        }
+        .off {
+          background: #d50000;
+          color: white;
+        }
+        .button:hover {
+          transform: scale(1.05);
+        }
+        .status {
+          margin-top: 20px;
+          font-size: 1.2em;
+          color: #fdd835;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>💡 Tubelight Controller</h1>
+      <button class="button on" onclick="toggleLight('on')">Turn ON</button>
+      <button class="button off" onclick="toggleLight('off')">Turn OFF</button>
+      <p class="status" id="statusText">Status: Unknown</p>
+
+      <script>
+        function toggleLight(state) {
+          fetch(`/${state}`)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("statusText").textContent = "Status: " + (state === "on" ? "ON" : "OFF");
+            })
+            .catch(error => {
+              document.getElementById("statusText").textContent = "Error: Could not reach ESP32";
+            });
+        }
+      </script>
+    </body>
+    </html>
