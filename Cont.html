@@ -3,372 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - KL IoT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Department of IoT</title>
     <style>
+                :root {
+        --red: #b42222;
+        --white: #ffffff;
+        --gray: rgb(211, 211, 211);
+        --text-gray: rgb(94, 94, 94);
+        }
+
+        /* Reset and font setup */
+        * {
+        font-family: "Merriweather", serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        /* Page Layout */
         body {
-            background-image: url(back.jpg);
-            font-family: Arial, sans-serif;
-            margin: 0; padding: 0;
-            display: flex; flex-direction: column;
-            min-height: 100vh;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
         }
-        .head img {width: 100%; height: 100%; object-fit: cover;}
-        nav {background-color: #a54848; padding: 10px; position: relative;}
-        nav ul, nav ul.main-menu {
-            list-style-type: none; display: flex;
-            justify-content: space-around; margin: 0; padding: 0;
-        }
-        nav li {margin: 0 15px; position: relative;}
-        nav a {
-            color: white; text-decoration: none;
-            padding: 10px 15px; transition: background-color 0.3s ease;
-            display: block;
-        }
-        nav a:hover {background-color: #555;}
-        .dropdown {position: relative;}
-        .dropdown-content {
-            display: none; position: absolute;
-            background-color: #ffffff; min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1; border-radius: 0 0 4px 4px;
-            top: 100%; left: 0;
-        }
-        .dropdown-content li {margin: 0; width: 100%;}
-        .dropdown-content a {padding: 12px 16px; text-align: left; color: rgb(0, 0, 0);}
-        .dropdown-content a:hover {background-color: #bb6e6e;}
-        .dropdown:hover .dropdown-content {display: block;}
-        .apply {
-            position: fixed; right: 0; top: 70%;
-            transform: translateY(-50%); background: #A41D24;
-            color: white; padding: 20px 10px; font-size: 18px;
-            font-weight: bold; text-decoration: none;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease-in-out;
-            writing-mode: vertical-rl; text-align: center; cursor: pointer;
-        }
-        .apply:hover {background: #8f1920;}
-        .header-container {
-            display: flex; justify-content: center;
-            padding: 20px; background-color: #A41D24;
-            color: white; gap: 20px;
-        }
-        .marquee-box {
-            width: 70%; overflow: hidden; position: relative;
-            border: 2px solid #fff; border-radius: 5px;
-        }
-        .marquee-images {
-            position: relative; animation: scroll 15s linear infinite;
-            display: flex; align-items: center; justify-content: flex-start;
-            flex-wrap: nowrap; width: max-content;
-        }
-        .marquee-images img {
-            width: auto; height: 300px; object-fit: contain;
-            transition: transform 0.3s ease; margin: 0 10px;
-        }
-        .marquee-images img:hover {transform: scale(1.1);}
-        
-        /* Contact Page Specific Styles */
+
+        /* Contact Section */
         .contact-container {
-            width: 80%;
-            margin: 40px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
+        background: var(--gray);
+        border-radius: 15px;
+        padding: 40px;
+        width: 90%;
+        max-width: 800px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
         }
-        
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #a54848;
+
+        /* Heading */
+        .contact-container h2 {
+        color: var(--red);
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: bold;
         }
-        
+
+        /* Contact Info Text */
+        .contact-container p {
+        color: var(--text-gray);
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        }
+
+        /* Contact Form */
         .contact-form {
-            flex: 2;
-            min-width: 300px;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #a54848;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         }
-        
-        .contact-heading {
-            color: #333;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #a54848;
+
+        .contact-form input,
+        .contact-form textarea {
+        padding: 12px 15px;
+        border: 1px solid var(--gray);
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: 0.3s ease;
         }
-        
-        .contact-item {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+        border-color: var(--red);
+        box-shadow: 0 0 5px rgba(180, 34, 34, 0.4);
         }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-            background-color: #a54848;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
+
+        /* Submit Button */
+        .contact-form button {
+        background-color: var(--red);
+        color: var(--white);
+        padding: 12px 0;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
         }
-        
-        .contact-text h3 {
-            margin: 0 0 5px 0;
-            color: #a54848;
+
+        .contact-form button:hover {
+        background-color: #a01e1e;
         }
-        
-        .contact-text p {
-            margin: 0;
-            color: #555;
+
+        /* Social Links */
+        .social-links {
+        margin-top: 30px;
         }
-        
-        .form-group {
-            margin-bottom: 20px;
+
+        .social-links a {
+        color: var(--red);
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: 0.3s;
         }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-            font-weight: bold;
+
+        .social-links a:hover {
+        color: #ff4444;
+        transform: scale(1.2);
         }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: Arial, sans-serif;
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+        .contact-container {
+            padding: 25px;
         }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
+
+        .contact-container h2 {
+            font-size: 1.5rem;
         }
-        
-        .submit-btn {
-            background-color: #a54848;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+
+        .contact-form button {
+            font-size: 0.9rem;
         }
-        
-        .submit-btn:hover {
-            background-color: #8f1920;
         }
-        
-        .map-container {
-            width: 100%;
-            height: 400px;
-            margin: 40px auto;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        footer {
-            background-color: #A41D24; color: white;
-            text-align: center; padding: 10px 0;
-            margin-top: auto; width: 100%;
-        }
-        footer h2 {font-size: 15px; margin: 0;}
-        
-        @keyframes scroll {
-            0% {transform: translateX(0);}
-            100% {transform: translateX(-100%);}
-        }
-        
-        @media (max-width: 992px) {
-            nav ul.main-menu {flex-wrap: wrap;}
-            .dropdown-content {position: relative; width: 100%; box-shadow: none;}
-            nav li {margin: 5px 10px;}
-            .contact-container {flex-direction: column;}
-        }
-        
-        @media (max-width: 768px) {
-            nav ul.main-menu {flex-direction: column; align-items: center;}
-            nav li {width: 100%; text-align: center;}
-            .dropdown-content {position: static; display: none; width: 100%;}
-            .dropdown:hover .dropdown-content {display: block;}
-            .contact-info, .contact-form {padding: 20px;}
-        }
+
     </style>
 </head>
 <body>
-    <header class="head">
-        <img src="KL-IoT-Head.png" alt="KLIoT Logo">
-    </header>
-
-    <nav>
-        <ul class="main-menu">
-            <li><a href="https://www.kluniversity.in/default.aspx">KLEF Home</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="Acad.html">Academic </a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Faculty</a></li>
-                    <li><a href="#">Curriculum</a></li>
-                    <li><a href="#">Research</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="infra.html">Infrastructure </a>
-                <ul class="dropdown-content">
-                    <li><a href="#About Infrastructure">Infrastructure</a></li>
-                    <li><a href="#Classroom">Classroom</a></li>
-                    <li><a href="#Labratory">Labratory</a></li>
-                    <li><a href="#Library">Library</a></li>
-                    <li><a href="#Course Outcome">Course Outcome</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="Pro&Skill.html">Project & Skilling </a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Student Projects</a></li>
-                    <li><a href="#">Workshops</a></li>
-                    <li><a href="#">Certifications</a></li>
-                    <li><a href="#">Industry Collaborations</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="Act.html">Activity </a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Clubs</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Competitions</a></li>
-                    <li><a href="#">Cultural Programs</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="Course Outcomes">Placement </a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Statistics</a></li>
-                    <li><a href="#">Companies</a></li>
-                    <li><a href="#">Success Stories</a></li>
-                    <li><a href="#">Training Programs</a></li>
-                </ul>
-            </li>
-            <li><a href="cont.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <a href="https://admissions.kluniversity.in/" target="_blank" class="apply">Apply Now</a>
-
-    <div class="header-container">
-        <div class="marquee-box">
-            <div class="marquee-images">
-                <img src="KLIOT1.jpg" alt="Image 1">
-                <img src="KLIOT2.jpeg" alt="Image 2">
-                <img src="KLIOT3.jpg" alt="Image 3">
-                <img src="POImg.png" alt="Image 4">
-                <img src="About_us_img1.webp" alt="Image 5">
-                <img src="About_us_img2.webp" alt="Image 6">
-            </div>
-        </div>
+    <!-- Apply Now Button -->
+    <div id="applyNow">
+        <button><a href="https://admissions.kluniversity.in/" target="_blank">Apply Now</a></button>
     </div>
 
-    <!-- Contact Page Content -->
-    <div class="contact-container">
-        <div class="contact-info">
-            <h2 class="contact-heading">Contact Information</h2>
-            
-            <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div class="contact-text">
-                    <h3>Address</h3>
-                    <p>KL Deemed to be University</p>
-                    <p>Green Fields, Vaddeswaram</p>
-                    <p>Guntur District, Andhra Pradesh, India - 522302</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div class="contact-text">
-                    <h3>Phone</h3>
-                    <p>Main: +91 9440112282</p>
-                    <p>Admissions: +91 866 2577715</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-icon">✉</div>
-                <div class="contact-text">
-                    <h3>Email</h3>
-                    <p>Dr P Satyanarayana<br>HoD of IoT,ECM Department</p>
-                    <p>admissions@kluniversity.in</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-icon">🕒</div>
-                <div class="contact-text">
-                    <h3>Office Hours</h3>
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p>Saturday: 9:00 AM - 1:00 PM</p>
-                    <p>Sunday: Closed</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-icon">🌐</div>
-                <div class="contact-text">
-                    <h3>Social Media</h3>
-                    <p>
-                        <a href="https://www.facebook.com/KLUniversity" style="color: #3b5998; margin-right: 10px;">Facebook</a>
-                        <a href="https://twitter.com/KLUniversity" style="color: #1da1f2; margin-right: 10px;">Twitter</a>
-                        <a href="https://www.instagram.com/kluniversity" style="color: #c13584; margin-right: 10px;">Instagram</a>
-                        <a href="https://www.linkedin.com/school/kluniversity" style="color: #0077b5;">LinkedIn</a>
-                    </p>
-                </div>
-            </div>
+    <!-- Header -->
+    <section id="KL-IoT-Logo">
+        <img src="/icons/KLU_Header.jpg" alt="KLIoT Logo" id="KLLogo">
+        <div id="IoT">
+            <h1>Department Of Internet Of Things <br>(IoT)</h1>
+            <img src="/images/dst.jpg">
         </div>
-        
-        <div class="contact-form">
-            <h2 class="contact-heading">Send Us a Message</h2>
-            
-            <form action="#" method="post">
-                <div class="form-group">
+    </section>
+
+    <!-- Navigation -->
+    <section id="nav">
+        <ul>
+            <li><a href="https://www.kluniversity.in/default.aspx" target="_blank">KLEF Home</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="acad.html">Academic</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="infra.html">Infrastructure</a></li>
+            <li><a href="pro&Skill.html">Project & Skilling</a></li>
+            <li><a href="act.html">Activity</a></li>
+            <li><a href="placements.html">Placement</a></li>
+            <li><a href="Cont.html">Contact</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <!-- Left Info -->
+            <div class="contact-info">
+                <h1>Contact Information</h1>
+                <p><b>📍 Address:</b><br> KL Deemed to be University,<br> Green Fields, Vaddeswaram,<br> Andhra Pradesh, India - 522302</p>
+                <p><b>📞 Phone:</b><br> Main: +91 9440112282<br> Admissions: +91 866 2577715</p>
+                <p><b>✉ Email:</b><br> Dr P Satyanarayana<br> HoD of IoT, ECM Department<br> admissions@kluniversity.in</p>
+                <p><b>🕒 Office Hours:</b><br> Mon–Fri: 9AM–5PM<br> Sat: 9AM–1PM<br> Sun: Closed</p>
+                <div class="social">
+                    <a href="https://www.facebook.com/KLUniversity">Facebook</a>
+                    <a href="https://twitter.com/KLUniversity">Twitter</a>
+                    <a href="https://www.instagram.com/kluniversity">Instagram</a>
+                    <a href="https://www.linkedin.com/school/kluniversity">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="contact-form">
+                <h1>Send Us a Message</h1>
+                <form>
                     <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
+                    <input type="text" id="name" required>
+
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
+                    <input type="email" id="email" required>
+
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
+                    <input type="tel" id="phone">
+
                     <label for="subject">Subject *</label>
-                    <select id="subject" name="subject" required>
+                    <select id="subject" required>
                         <option value="">Select a subject</option>
                         <option value="admission">Admission Inquiry</option>
                         <option value="academic">Academic Information</option>
@@ -376,23 +205,22 @@
                         <option value="placement">Placement</option>
                         <option value="other">Other</option>
                     </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </div>
-    
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.6209966212905!2d80.62088731486733!3d16.44136198864752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f0a2a7d81943%3A0x8ba5d78f65df94b8!2sK%20L%20University!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-    </div>
 
-    <footer class="footer">
+                    <label for="message">Message *</label>
+                    <textarea id="message" required></textarea>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.6209966212905!2d80.62088731486733!3d16.44136198864752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f0a2a7d81943%3A0x8ba5d78f65df94b8!2sK%20L%20University!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
         <h2>© 2025 K L E F Deemed to be University. All Rights Reserved.</h2>
     </footer>
 </body>
