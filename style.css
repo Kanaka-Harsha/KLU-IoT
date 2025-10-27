@@ -75,7 +75,8 @@ body
 {
   width: 99%;
   height: 40px;
-  background-color: var(--red);
+  /* background-color: var(--red); */
+  border:3px solid var(--red);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,18 +97,18 @@ body
 #nav ul li a 
 {
   display: block;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 20px 30px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 200;
   border-radius: 20px;
-  transition: background-color 0.2s ease-in-out, color 0.1s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 #nav ul li a:hover
 {
-  transform: scale(1.03);
+  transform: scale(1.1);
 }
 
 /* ---------------- MOVING IMAGES ---------------- */
@@ -261,7 +262,7 @@ body
   box-shadow: 0 0 15px 1px var(--gray);
   width: 40%;
   height: 300px;
-  transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease;
   line-height: 20px;
 }
 .vision h1
@@ -318,7 +319,7 @@ video
   box-shadow: 0 0 15px 1px var(--gray);
   width: auto;
   height: 300px;
-  transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 #peos:hover
 {
@@ -402,7 +403,7 @@ video
     height:30vh;
     box-shadow: 0 0 15px 1px var(--gray);
     border-radius: 10px;
-    transition: 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
 #companies img:hover
 {
