@@ -79,7 +79,7 @@ body
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 20px 1px var(--red);
+  box-shadow: 0 0 15px 1px var(--red);
 }
 #nav ul 
 {
@@ -107,7 +107,7 @@ body
 }
 #nav ul li a:hover
 {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 /* ---------------- MOVING IMAGES ---------------- */
@@ -192,7 +192,7 @@ body
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0 0 20px 1px var(--red);
+  box-shadow: 0 0 10px 1px var(--red);
 }
 #scroll-head
 {
@@ -258,7 +258,7 @@ body
   padding: 10px;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 0 20px 1px var(--red);
+  box-shadow: 0 0 10px 1px var(--red);
   width: 40%;
   height: 300px;
   transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -286,8 +286,8 @@ body
 }
 .vision:hover
 {
-  box-shadow: 0 0 20px 1px var(--red);
-  scale: 1.1;
+  box-shadow: 0 0 15px 1px var(--red);
+  scale: 1.03;
 }
 
 /* ---------------- PEO & VIDEO ---------------- */
@@ -315,15 +315,15 @@ video
   padding: 10px;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 0 20px 1px var(--red);
+  box-shadow: 0 0 15px 1px var(--red);
   width: auto;
   height: 300px;
   transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 #peos:hover
 {
-  box-shadow: 0 0 20px 1px var(--red);
-  scale: 1.1;
+  box-shadow: 0 0 15px 1px var(--red);
+  scale: 1.03;
 }
 
 /* ---------------- PROGRAM OUTCOMES TABLE ---------------- */
@@ -336,7 +336,7 @@ video
 }
 #pos:hover
 {
-  box-shadow: 0 0 20px 1px var(--red);
+  box-shadow: 0 0 15px 1px var(--red);
 }
 #pos .table td
 {
@@ -400,13 +400,13 @@ video
 {
     width:20%;
     height:30vh;
-    box-shadow: 0 0 20px 1px var(--red);
+    box-shadow: 0 0 15px 1px var(--red);
     border-radius: 10px;
     transition: 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 #companies img:hover
 {
-    scale:1.1;
+    scale:1.03;
 }
 footer
 {
