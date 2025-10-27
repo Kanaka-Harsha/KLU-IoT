@@ -4,6 +4,7 @@
   --white: #ffffff;
   --gray: rgb(211, 211, 211);
   --text-gray: rgb(94, 94, 94);
+  --shadow:0 0 15px 1px var(--gray);
 }
 
 *
@@ -449,7 +450,7 @@ video
   color: var(--red);
   margin-top: 0;
   text-align: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Arial', serif;
 }
 
 .contact-info p 
@@ -512,7 +513,7 @@ video
   color: var(--red);
   margin-top: 0;
   text-align: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Arial', serif;
 }
 
 .contact-form form 
@@ -609,7 +610,7 @@ video
   text-align: center;
   border-radius: 20px;
   padding: 10px;
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Arial', serif; */
   font-size: 1.8rem;
 }
 
@@ -634,7 +635,7 @@ video
 .acad-section h2 
 {
   color: var(--red);
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Arial', serif; */
   border-bottom: 2px solid var(--gray);
   padding-bottom: 10px;
   font-size: 1.5rem;
@@ -720,6 +721,37 @@ video
   flex-grow: 1;
 }
 
+/* ---------------- infra.html ---------------- */
+.infra-section
+{
+  background-color: var(--white);
+  width: 85%;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 1px var(--gray);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+
+.infra-section h2 
+{
+  color: var(--red);
+  /* font-family: 'Arial', serif; */
+  border-bottom: 2px solid var(--gray);
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.infra-section p 
+{
+  color: var(--text-gray);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+
+/* ----------------Footer---------------- */
 footer
 {
     /* margin-top:10px; */
