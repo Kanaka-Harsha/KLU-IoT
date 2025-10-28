@@ -22,7 +22,7 @@
             <!-- User's original image path -->
             <img src="/icons/KLU_Header.jpg" alt="KLIoT Logo" class="img-fluid w-100" onerror="this.src='https://placehold.co/1920x300/b42222/ffffff?text=KL_Header+Image+Not+Found'">
             <div class="container-fluid text-center p-3 d-lg-flex justify-content-around align-items-center">
-                <h1 class="h3 text-klu-red">Department Of Internet Of Things (IoT)</h1>
+                <h1 class="h3 text-klu-red">Department Of Internet Of Things <br>(IoT)</h1>
                 <!-- User's original image path -->
                 <img src="/images/dst.jpg" alt="DST Logo" class="img-fluid" style="max-height: 80px;" onerror="this.src='https://placehold.co/150x80/eeeeee/333333?text=DST+Logo+Not+Found'">
             </div>
@@ -62,123 +62,124 @@
                 </div>
             </div>
 
-            <!-- Our Projects -->
+            <!-- Student Projects & Innovations -->
             <div class="p-3 border rounded klu-shadow mb-4">
-                <h2 class="h4 text-klu-red content-heading">Our Projects</h2>
-                <p class="text-klu-gray text-justify">Our B.Tech in IoT is a comprehensive 4-year undergraduate program designed to equip students with the multidisciplinary knowledge required to excel in the rapidly evolving field of IoT. The program blends core concepts from electronics, computer science, and data communication, preparing students to design, build, and manage connected systems.</p>
-            </div>
-
-            <!-- NEW: Laboratories (Tabbed Interface) -->
-            <div class="p-3 border rounded klu-shadow mb-4">
-                <h2 class="h4 text-klu-red content-heading">Laboratories & Facilities</h2>
-                <p class="text-klu-gray text-justify">The department boasts state-of-the-art laboratories to provide practical, hands-on learning, ensuring students can translate theory into practice.</p>
+                <h2 class="h4 text-klu-red content-heading">Student Projects & Innovations</h2>
+                <p class="text-klu-gray text-justify">Our curriculum is built around hands-on learning. Students apply theoretical knowledge to build real-world, functional IoT projects, tackling challenges in smart agriculture, healthcare, industrial automation, and more.</p>
                 
-                <!-- Nav Pills -->
-                <ul class="nav nav-pills nav-fill mb-3 project-nav-pills" id="labTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="iot-lab-tab" data-bs-toggle="pill" data-bs-target="#iot-lab" type="button" role="tab" aria-controls="iot-lab" aria-selected="true">IoT Innovation Lab</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="embedded-lab-tab" data-bs-toggle="pill" data-bs-target="#embedded-lab" type="button" role="tab" aria-controls="embedded-lab" aria-selected="false">Embedded Systems Lab</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="network-lab-tab" data-bs-toggle="pill" data-bs-target="#network-lab" type="button" role="tab" aria-controls="network-lab" aria-selected="false">Networking Lab</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="cloud-lab-tab" data-bs-toggle="pill" data-bs-target="#cloud-lab" type="button" role="tab" aria-controls="cloud-lab" aria-selected="false">Cloud & Data Lab</button>
-                    </li>
-                </ul>
-
-                <!-- Tab Content -->
-                <div class="tab-content klu-shadow-light" id="labTabContent">
-                    <!-- IoT Lab Pane -->
-                    <div class="tab-pane fade show active" id="iot-lab" role="tabpanel" aria-labelledby="iot-lab-tab">
-                        <div class="row g-3 align-items-center">
-                            <div class="col-md-4">
-                                <img src="https://placehold.co/400x300/b42222/ffffff?text=IoT+Innovation+Lab" class="img-fluid rounded" alt="IoT Lab" onerror="this.src='https://placehold.co/400x300/b42222/ffffff?text=IoT+Lab+Image'">
-                            </div>
-                            <div class="col-md-8">
-                                <h5 class="text-klu-red">IoT Innovation Lab</h5>
-                                <p class="text-klu-gray small text-justify">Equipped with various development boards (like Raspberry Pi, Arduino, ESP32), a wide array of sensors (temperature, humidity, motion, etc.), and actuators for rapid prototyping of end-to-end IoT solutions.</p>
+                <!-- Project Card Grid -->
+                <div class="row g-4 mt-2">
+                    <!-- Project Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 klu-shadow-light project-card">
+                            <img src="https://placehold.co/600x400/b42222/ffffff?text=Smart+Agriculture+Project" class="card-img-top" alt="Smart Agriculture" onerror="this.src='https://placehold.co/600x400/b42222/ffffff?text=Smart+Agri+Project'">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-klu-red">Smart Agriculture System</h5>
+                                <p class="card-text small text-klu-gray flex-grow-1">A sensor-based system to monitor soil moisture, humidity, and temperature, with automated irrigation control to optimize water usage and improve crop yield.</p>
+                                <div class="mt-auto">
+                                    <span class="badge skill-badge-soft">ESP32</span>
+                                    <span class="badge skill-badge-soft">MQTT</span>
+                                    <span class="badge skill-badge-soft">Arduino</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Embedded Lab Pane -->
-                    <div class="tab-pane fade" id="embedded-lab" role="tabpanel" aria-labelledby="embedded-lab-tab">
-                        <div class="row g-3 align-items-center">
-                            <div class="col-md-4">
-                                <img src="https://placehold.co/400x300/eeeeee/333333?text=Embedded+Systems+Lab" class="img-fluid rounded" alt="Embedded Systems Lab" onerror="this.src='https://placehold.co/400x300/eeeeee/333333?text=Embedded+Lab+Image'">
-                            </div>
-                            <div class="col-md-8">
-                                <h5 class="text-klu-red">Embedded Systems Lab</h5>
-                                <p class="text-klu-gray small text-justify">Focuses on microcontroller programming (ARM, AVR), interfacing peripherals, and understanding real-time operating systems (RTOS). Students learn to build reliable, low-level device software.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Networking Lab Pane -->
-                    <div class="tab-pane fade" id="network-lab" role="tabpanel" aria-labelledby="network-lab-tab">
-                        <div class="row g-3 align-items-center">
-                            <div class="col-md-4">
-                                <img src="https://placehold.co/400x300/b42222/ffffff?text=Networking+Lab" class="img-fluid rounded" alt="Networking Lab" onerror="this.src='https://placehold.co/400x300/b42222/ffffff?text=Network+Lab+Image'">
-                            </div>
-                            <div class="col-md-8">
-                                <h5 class="text-klu-red">Communication & Networking Lab</h5>
-                                <p class="text-klu-gray small text-justify">Tools and hardware (like routers, switches, and simulation software like NS3/GNS3) for simulating, analyzing, and configuring network protocols (TCP/IP, MQTT) and wireless communication technologies (Wi-Fi, LoRaWAN, Bluetooth).</p>
+                    <!-- Project Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 klu-shadow-light project-card">
+                            <img src="https://placehold.co/600x400/333333/ffffff?text=Connected+Healthcare+Project" class="card-img-top" alt="Connected Healthcare" onerror="this.src='https://placehold.co/600x400/333333/ffffff?text=Healthcare+Project'">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-klu-red">Remote Patient Monitoring</h5>
+                                <p class="card-text small text-klu-gray flex-grow-1">A wearable device that tracks vital signs (heart rate, SpO2) and sends real-time alerts to a doctor's dashboard via a cloud platform, enabling remote healthcare.</p>
+                                <div class="mt-auto">
+                                    <span class="badge skill-badge-soft">Raspberry Pi</span>
+                                    <span class="badge skill-badge-soft">AWS IoT</span>
+                                    <span class="badge skill-badge-soft">Python</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Cloud Lab Pane -->
-                    <div class="tab-pane fade" id="cloud-lab" role="tabpanel" aria-labelledby="cloud-lab-tab">
-                        <div class="row g-3 align-items-center">
-                            <div class="col-md-4">
-                                <img src="https://placehold.co/400x300/eeeeee/333333?text=Cloud+%26+Data+Lab" class="img-fluid rounded" alt="Cloud Computing Lab" onerror="this.src='https://placehold.co/400x300/eeeeee/333333?text=Cloud+Lab+Image'">
-                            </div>
-                            <div class="col-md-8">
-                                <h5 class="text-klu-red">Cloud & Data Analytics Lab</h5>
-                                <p class="text-klu-gray small text-justify">High-performance workstations equipped for working with major cloud platforms (AWS, Azure, GCP). Students run data-intensive applications, train ML models, and manage data pipelines for IoT analytics.</p>
+                    <!-- Project Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 klu-shadow-light project-card">
+                            <img src="https://placehold.co/600x400/b42222/ffffff?text=Industrial+IoT+Project" class="card-img-top" alt="Industrial IoT" onerror="this.src='https://placehold.co/600x400/b42222/ffffff?text=IIoT+Project'">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-klu-red">Industrial IoT Monitor</h5>
+                                <p class="card-text small text-klu-gray flex-grow-1">A system for predictive maintenance in a factory setting. It monitors machine vibration and temperature to predict failures before they happen.</p>
+                                <div class="mt-auto">
+                                    <span class="badge skill-badge-soft">LoRaWAN</span>
+                                    <span class="badge skill-badge-soft">Azure IoT</span>
+                                    <span class="badge skill-badge-soft">ML</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- NEW: Components (List Group) -->
+            <!-- Core Skills & Technologies -->
             <div class="p-3 border rounded klu-shadow mb-4">
-                <h2 class="h4 text-klu-red content-heading">Components Available</h2>
-                <p class="text-klu-gray text-justify">The department houses a wide range of advanced electronic components and modules, enabling students to design, prototype, and test real-world IoT systems with precision and creativity.</p>
+                <h2 class="h4 text-klu-red content-heading">Core Skills & Technologies</h2>
+                <p class="text-klu-gray text-justify">Our program equips students with a comprehensive skill set, from low-level hardware programming to high-level cloud architecture and data analysis.</p>
+
+                <div class="mt-3">
+                    <h6 class="text-klu-red fw-bold">Programming & Embedded Systems</h6>
+                    <span class="badge skill-badge">C/C++</span>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">Embedded C</span>
+                    <span class="badge skill-badge">Arduino</span>
+                    <span class="badge skill-badge">Raspberry Pi</span>
+                    <span class="badge skill-badge">ESP32/ESP8266</span>
+                    <span class="badge skill-badge">RTOS</span>
+                </div>
+
+                <hr class="my-3">
+
+                <div class="mt-3">
+                    <h6 class="text-klu-red fw-bold">Connectivity & Protocols</h6>
+                    <span class="badge skill-badge">Wi-Fi</span>
+                    <span class="badge skill-badge">Bluetooth (BLE)</span>
+                    <span class="badge skill-badge">LoRaWAN</span>
+                    <span class="badge skill-badge">MQTT</span>
+                    <span class="badge skill-badge">CoAP</span>
+                    <span class="badge skill-badge">HTTP/REST APIs</span>
+                    <span class="badge skill-badge">TCP/IP</span>
+                </div>
+
+                <hr class="my-3">
+
+                <div class="mt-3">
+                    <h6 class="text-klu-red fw-bold">Cloud, Data & Security</h6>
+                    <span class="badge skill-badge">AWS IoT Core</span>
+                    <span class="badge skill-badge">Microsoft Azure IoT Hub</span>
+                    <span class="badge skill-badge">Data Analytics</span>
+                    <span class="badge skill-badge">Machine Learning</span>
+                    <span class="badge skill-badge">Network Security</span>
+                    <span class="badge skill-badge">Node-RED</span>
+                </div>
+            </div>
+
+            <!-- Industry Certifications -->
+            <div class="p-3 border rounded klu-shadow mb-4">
+                <h2 class="h4 text-klu-red content-heading">Industry Certifications & Skilling</h2>
+                <p class="text-klu-gray text-justify">We partner with leading tech companies to provide our students with opportunities to gain industry-recognized certifications, making them exceptionally competitive in the job market.</p>
                 
                 <ul class="list-group list-group-flush mt-3">
-                    <!-- Component Item 1 -->
-                    <li class="list-group-item d-flex flex-column flex-md-row align-items-start component-list-item">
-                        <img src="https://placehold.co/400x300/b42222/ffffff?text=Microcontrollers" class="component-list-img" alt="Microcontrollers" onerror="this.src='https://placehold.co/400x300/b42222/ffffff?text=Sensor+Board+Image'">
-                        <div class="ms-0 ms-md-3 mt-2 mt-md-0">
-                            <h5 class="mb-1">Microcontrollers</h5>
-                            <p class="text-klu-gray small text-justify mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequuntur sunt autem, optio quaerat voluptatem similique unde doloremque velit beatae sint amet, quo porro perspiciatis! Eos animi dolores quisquam maxime similique dignissimos totam.</p>
-                        </div>
+                    <li class="list-group-item list-group-item-action p-3">
+                        <h6 class="mb-1 text-klu-red">AWS Certified Cloud Practitioner</h6>
+                        <p class="mb-0 text-klu-gray small">Students are trained on AWS fundamentals, cloud concepts, security, and core services, preparing them for the official certification exam.</p>
                     </li>
-                    <!-- Component Item 2 -->
-                    <li class="list-group-item d-flex flex-column flex-md-row align-items-start component-list-item">
-                        <img src="https://placehold.co/400x300/b42222/ffffff?text=Sensors" class="component-list-img" alt="Sensors" onerror="this.src='https://placehold.co/400x300/b42222/ffffff?text=Sensor+Board+Image'">
-                        <div class="ms-0 ms-md-3 mt-2 mt-md-0">
-                            <h5 class="mb-1">Sensors</h5>
-                            <p class="text-klu-gray small text-justify mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequuntur sunt autem, optio quaerat voluptatem similique unde doloremque velit beatae sint amet, quo porro perspiciatis! Eos animi dolores quisquam maxime similique dignissimos totam.</p>
-                        </div>
+                    <li class="list-group-item list-group-item-action p-3">
+                        <h6 class="mb-1 text-klu-red">Cisco Certified CyberOps Associate</h6>
+                        <p class="mb-0 text-klu-gray small">A departmental tie-up focusing on IoT security, threat analysis, and network monitoring from a security operations center (SOC) perspective.</p>
                     </li>
-                    <!-- Component Item 3 -->
-                    <li class="list-group-item d-flex flex-column flex-md-row align-items-start component-list-item">
-                        <img src="https://placehold.co/400x300/b42222/ffffff?text=Actuators" class="component-list-img" alt="Actuators" onerror="this.src='https://placehold.co/400x300/b42222/ffffff?text=Sensor+Board+Image'">
-                        <div class="ms-0 ms-md-3 mt-2 mt-md-0">
-                            <h5 class="mb-1">Actuators</h5>
-                            <p class="text-klu-gray small text-justify mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequuntur sunt autem, optio quaerat voluptatem similique unde doloremque velit beatae sint amet, quo porro perspiciatis! Eos animi dolores quisquam maxime similique dignissimos totam.</p>
-                        </div>
+                    <li class="list-group-item list-group-item-action p-3">
+                        <h6 class="mb-1 text-klu-red">Microsoft Azure IoT Developer (AZ-220)</h6>
+                        <p class="mb-0 text-klu-gray small">Advanced training on implementing and managing IoT solutions using Microsoft Azure, including IoT Hub, device provisioning, and data processing.</p>
                     </li>
-                    <!-- Component Item 4 -->
-                    <li class="list-group-item d-flex flex-column flex-md-row align-items-start component-list-item">
-                        <img src="https://placehold.co/400x300/b42222/ffffff?text=IoT+Boards" class="component-list-img" alt="IoT Boards" onerror="this.src='https://placehold.co/400x300/b42222/ffffff?text=Sensor+Board+Image'">
-                        <div class="ms-0 ms-md-3 mt-2 mt-md-0">
-                            <h5 class="mb-1">IoT Boards</h5>
-                            <p class="text-klu-gray small text-justify mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequuntur sunt autem, optio quaerat voluptatem similique unde doloremque velit beatae sint amet, quo porro perspiciatis! Eos animi dolores quisquam maxime similique dignissimos totam.</p>
-                        </div>
+                    <li class="list-group-item list-group-item-action p-3">
+                        <h6 class="mb-1 text-klu-red">Palo Alto Networks Cybersecurity</h6>
+                        <p class="mb-0 text-klu-gray small">Access to Palo Alto's cybersecurity academy curriculum, covering next-generation firewalls and network security principles.</p>
                     </li>
                 </ul>
             </div>
