@@ -251,3 +251,21 @@ footer {
   border-color: var(--klu-red);
 }
 
+/* ---------------- PLACEMENTS PAGE ---------------- */
+.placement-hero-card {
+  border: none;
+  overflow: hidden; /* Ensures rounded corners are clean */
+}
+
+.placement-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.company-spotlight-card .card-header {
+  background-color: var(--klu-red);
+  font-weight: bold;
+}
+
