@@ -163,64 +163,7 @@ footer {
   border-color: var(--klu-red);
 }
 
-/* ---------------- PROJECTS & SKILLING PAGE ---------------- */
-
-/* Styles for the new Lab Tabs */
-.project-nav-pills .nav-link {
-  color: var(--klu-red);
-  border: 1px solid var(--klu-red);
-  margin: 0 5px 5px 5px; /* Add spacing for pills */
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.project-nav-pills .nav-link.active {
-  color: var(--klu-white);
-  background-color: var(--klu-red);
-  border-color: var(--klu-red);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.project-nav-pills .nav-link:hover:not(.active) {
-    background-color: #fdf0f0; /* Light red hover */
-}
-
-/* Styles for the Tab Content area */
-.tab-content {
-    padding: 1.5rem;
-    border: 1px solid var(--klu-gray);
-    border-top: 0;
-    border-radius: 0 0 0.375rem 0.375rem; /* Match Bootstrap's border-radius */
-    background-color: var(--klu-white);
-}
-
-/* Styles for the new Component List Group */
-.component-list-item {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-.component-list-item h5 {
-    color: var(--klu-red);
-    font-weight: 600;
-}
-
-.component-list-img {
-    width: 100%; /* Full width on mobile */
-    max-width: 200px; /* Max width on desktop */
-    height: 150px;
-    object-fit: cover;
-    border-radius: 0.375rem; /* Bootstrap's rounded */
-    border: 1px solid var(--klu-gray);
-}
-
-@media (min-width: 768px) {
-    .component-list-img {
-        width: 200px; /* Fixed width on desktop */
-    }
-}
-
-/* ---------------- FACULTY PAGE (NEW STYLES) ---------------- */
+/* ---------------- FACULTY PAGE ---------------- */
 .faculty-card {
   transition: all 0.3s ease;
   border: 1px solid var(--klu-gray);
@@ -244,5 +187,67 @@ footer {
 
 .faculty-card .text-muted {
   font-size: 0.9rem;
+}
+
+
+/* ---------------- PROJECTS & SKILLING PAGE ---------------- */
+.project-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--klu-gray);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--klu-shadow);
+  border-color: var(--klu-red);
+}
+
+.project-card .card-img-top {
+  border-bottom: 3px solid var(--klu-red);
+}
+
+/* Main skill badge (dark red) */
+.skill-badge {
+  background-color: var(--klu-red);
+  color: var(--klu-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5em 0.9em;
+  margin: 4px;
+}
+
+/* Softer badge for project cards (light red) */
+.skill-badge-soft {
+  background-color: #fde8e8; /* Light red */
+  color: var(--klu-red);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4em 0.7em;
+  margin: 2px;
+}
+
+/* ---------------- ACTIVITIES PAGE ---------------- */
+.activity-img-lg,
+.activity-img-sm {
+  border: 2px solid var(--klu-gray);
+  box-shadow: var(--klu-shadow-light);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+}
+
+.activity-img-lg {
+  height: 300px;
+}
+
+.activity-img-sm {
+  height: 170px;
+}
+
+.activity-img-lg:hover,
+.activity-img-sm:hover {
+  transform: scale(1.03);
+  box-shadow: var(--klu-shadow);
+  border-color: var(--klu-red);
 }
 
