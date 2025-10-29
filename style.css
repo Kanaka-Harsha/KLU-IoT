@@ -41,7 +41,7 @@ footer {
 .apply-now-button {
   right: 0;
   top: 70%;
-  transform: rotate(-90deg) translateX(50%);
+  transform: rotate(90deg) translate(100%);
   transform-origin: right top;
   z-index: 999;
   position: fixed;
@@ -50,9 +50,10 @@ footer {
 .apply-now-button a {
   background-color: var(--klu-red);
   border-color: var(--klu-red);
+  color:#fcfcfc;
   font-weight: 500;
   font-size: 1rem;
-  border-radius: 0 0 5px 5px;
+  /* border-radius: 0 0 5px 5px; */
 }
 
 /* ---------------- HEADER & NAVIGATION ---------------- */
