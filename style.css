@@ -19,7 +19,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #fcfcfc;
   overflow-x: hidden;
 }
